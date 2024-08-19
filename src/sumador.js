@@ -11,7 +11,7 @@ function Nombre(idioma, name) {
   function Genero(idioma,genero){
     let saludo;
     if (idioma == 'Español')
-      saludo = "de genero " + genero;
+      saludo = " de genero " + genero;
     else{
       saludo= " gender " + genero;
     }
