@@ -8,7 +8,7 @@ function Nombre(idioma, name) {
     return saludo;
   }
   
-  function Genero(genero){
+  function Genero(idioma,genero){
     let saludo;
     if (idioma == 'Español')
       saludo = "de genero " + genero;
@@ -18,17 +18,19 @@ function Nombre(idioma, name) {
     return saludo;
   }
   
-  function Edad(age){
+  function Edad(idioma,age){
     let saludo;
     if (idioma == 'Español')
-      saludo = " con edad de " + genero + "años";
+      saludo = " con edad de " + age + "años";
     else{
-      saludo= " with age " + genero + "years old";
+      saludo= " with age " + age + "years old";
     }
     return saludo;
   }
    
   function Saludo(firstDates, secondDates, ageDate, idioma){
-    let saludo = Nombre(idioma, firstDates) + Genero(secondDates) + Edad(ageDate);
+    let saludo = Nombre(idioma, firstDates) + Genero(idioma,secondDates) + Edad(idioma,ageDate);
     return saludo;
   }
+
+  export default Saludo;

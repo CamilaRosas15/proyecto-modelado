@@ -1,8 +1,9 @@
-import {Nombre, Genero,Edad,SaludoEspanol} from "./sumador";
+import Saludo from "./sumador";
 
 const name = document.querySelector("#nombre");
 const orientacion = document.querySelector("#genero");
 const age = document.querySelector("#edad");
+const idioma = document.querySelector("#idioma");
 const form = document.querySelector("#saludar-form");
 const div = document.querySelector("#resultado-div");
 
@@ -12,6 +13,7 @@ form.addEventListener("submit", (event) => {
   const firstDates = String(name.value);
   const secondDates = String(orientacion.value);
   const ageDate = Number.parseInt(age.value);
-  div.innerHTML = "<p>" + SaludoEspanol(firstDates,secondDates,ageDate) + "</p>";
+  const lenguaje = String(idioma.value);
+  div.innerHTML = "<p>" + Saludo(firstDates,secondDates,ageDate,lenguaje) + "</p>";
 
 });
