@@ -1,9 +1,6 @@
-function sumar(a, b) {
-  return a + b;
+function Nombre(name)
+{
+    return "Hola" + name;
 }
 
-function multiplicar(a, b) {
-  return a * b;
-}
-
-export {sumar,multiplicar};
+export default Nombre;

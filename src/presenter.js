@@ -1,20 +1,13 @@
-import {sumar,multiplicar} from "./sumador";
+import Nombre from "./sumador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const name = document.querySelector("#nombre");
+const form = document.querySelector("#saludar-form");
 const div = document.querySelector("#resultado-div");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
+  const firstDates = String(name.value);
+  div.innerHTML = "<p>" + Nombre(firstDates) + "</p>";  
 
-  if (event.submitter.id === "sumar-button") {
-    div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
-  } else if (event.submitter.id === "multiplicar-button") {
-    div.innerHTML = "<p>" + multiplicar(firstNumber, secondNumber) + "</p>";
-  }
-  //div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
 });
