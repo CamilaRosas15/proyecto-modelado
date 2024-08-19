@@ -1,7 +1,8 @@
-import {Nombre, Genero} from "./sumador";
+import {Nombre, Genero,Edad} from "./sumador";
 
 const name = document.querySelector("#nombre");
 const orientacion = document.querySelector("#genero");
+const age = document.querySelector("#edad");
 const form = document.querySelector("#saludar-form");
 const div = document.querySelector("#resultado-div");
 
@@ -10,9 +11,7 @@ form.addEventListener("submit", (event) => {
 
   const firstDates = String(name.value);
   const secondDates = String(orientacion.value);
-  div.innerHTML = "<p>" + Nombre(firstDates) + Genero(secondDates) + "</p>";
-
-
-  
+  const ageDate = Number.parseInt(age.value);
+  div.innerHTML = "<p>" + Nombre(firstDates) + Genero(secondDates) + Edad(ageDate) + "</p>";
 
 });

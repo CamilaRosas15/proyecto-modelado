@@ -8,4 +8,9 @@ function Genero(genero)
     return " de genero " + genero;
 }
 
-export {Nombre,Genero};
+function Edad(age)
+{
+    return " con edad de " + age;
+}
+
+export {Nombre,Genero,Edad};
